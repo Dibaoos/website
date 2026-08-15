@@ -1,0 +1,189 @@
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ef;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background-color: #ffd6a5;
+    color: #4a3b32;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: #87ceeb;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff2b2;
+}
+
+
+/* Home */
+
+.home {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fff1d6;
+}
+
+.home h2 {
+    font-size: 42px;
+    color: #e76f51;
+    margin-bottom: 15px;
+}
+
+.home p {
+    font-size: 18px;
+    color: #5f6f52;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #ff8fa3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e76f51;
+}
+
+
+/* Products */
+
+.products {
+    padding: 55px 30px;
+    text-align: center;
+    background-color: #fefae0;
+}
+
+.products h2 {
+    color: #e76f51;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: white;
+    width: 230px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    background-color: #f8f5ee;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 15px 0 8px;
+    color: #4a3b32;
+}
+
+.product p {
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #e76f51;
+}
+
+
+/* About */
+
+.about {
+    background-color: #d8f3dc;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.about h2 {
+    color: #52796f;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #fff1d6;
+}
+
+.contact h2 {
+    color: #e76f51;
+    margin-bottom: 20px;
+}
+
+.contact input,
+.contact textarea {
+    display: block;
+    width: 300px;
+    padding: 12px;
+    margin: 10px auto;
+    border: 1px solid #ffd6a5;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.contact button {
+    margin-top: 5px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #87ceeb;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
