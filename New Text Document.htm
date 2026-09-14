@@ -1,0 +1,110 @@
+abstract class LibraryItem {
+    private String itemId,title;
+    private double price;
+    LibraryItem(String i,String t,double p){
+        itemId=i;
+        title=t;
+        price=p;
+    }
+    LibraryItem(String i,String t ){
+        itemId=i;
+        title=t;
+    }
+    String getItemId(){
+        return itemId;
+    }
+    String getTitle(){
+        return title;
+    }
+    double getPrice(){
+        return price;
+    }
+    void setPrice(double p){
+        price=p;
+    }
+    void setPrice(double p,int discount ){
+        double dis=discount/100.0;
+        price=p-(p*dis);
+    }
+    void displayinfo(){
+        System.out.println("Item is "+itemId);
+        System.out.println("Title is "+title);
+        System.out.println("price is "+price);
+    }
+    abstract String getItemType();
+}
+interface Borrowable{
+    void borrow(String memberid);
+    void returnitem();
+}
+class Book extends LibraryItem implements Borrowable{
+    private String author;
+    Book(String i,String t,double p, String a){
+        super(i,t,p);
+        author=a;
+    }
+    String getAuthor(){
+        return author;
+    }
+    void setAuthor(String a){
+        author=a;
+    }
+    void displayinfo(){
+        System.out.println("Item is "+getItemId());
+        System.out.println("Title is "+getTitle());
+        System.out.println("price is "+getPrice());
+        System.out.println("Author is "+author);
+    }
+    public void borrow(String n){
+        System.out.println("Member id is "+n);
+    }
+    public void returnitem(){
+        System.out.println("Book name is "+getTitle());
+    }
+    String getItemType(){
+        return "book";
+    }
+
+}
+class Newspaper extends LibraryItem{
+    private String PublicationDate;
+    Newspaper(String i,String t,double p, String a){
+        super(i,t,p);
+        PublicationDate=a;
+    }
+    String getPublicationDate(){
+        return PublicationDate;
+    }
+    void setPublicationDate(String a){
+        PublicationDate=a;
+    }
+    void displayinfo(){
+        System.out.println("Item is "+getItemId());
+        System.out.println("Title is "+getTitle());
+        System.out.println("price is "+getPrice());
+        System.out.println("Publication date  is "+PublicationDate);
+    }
+    String getItemType(){
+        return "newspaper";
+    }
+}
+void main(String[] args){
+    Book b=new Book("1234silliy","Hoimanty",500,"humayun");
+    Newspaper n=new Newspaper("1234xyz","Adity",300,"20.september.2001");
+    b.getTitle();
+    b.displayinfo();
+    System.out.println(b.getItemType());
+    b.setPrice(500);
+    System.out.println(b.getPrice());
+    b.setPrice(500,3);
+   System.out.println(b.getPrice());
+   b.borrow("234sos");
+    n.getTitle();
+    n.displayinfo();
+    System.out.println(n.getItemType());
+    n.setPrice(300);
+    System.out.println(n.getPrice());
+    n.setPrice(300,2);
+    System.out.println(n.getPrice());
+    b.borrow("234oop");
+}
